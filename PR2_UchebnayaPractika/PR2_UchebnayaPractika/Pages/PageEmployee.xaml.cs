@@ -35,7 +35,7 @@ namespace PR2_UchebnayaPractika.Pages
 
         private void BtnAddUser_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameApp.frmObj.Navigate(new PageRegistrarion());
         }
 
         private void BtnMore_Click(object sender, RoutedEventArgs e)

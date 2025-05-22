@@ -56,6 +56,7 @@
     <Property Name="Login" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="Full_name" Type="varchar(max)" />
   </EntityType>
   <Association Name="FK__Order__PriorityI__72C60C4A">
     <End Role="Priority" Type="Self.Priority" Multiplicity="0..1" />

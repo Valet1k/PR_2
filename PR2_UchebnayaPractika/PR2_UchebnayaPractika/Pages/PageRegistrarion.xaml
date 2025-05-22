@@ -14,35 +14,69 @@
                 HorizontalAlignment="Right"
                 Content="Назад"
                 Name="BtnBack"
-                Click="BtnBack_Click"/>
+                Click="BtnBack_Click"
+                Margin="5"/>
 
         <StackPanel VerticalAlignment="Center"
                     HorizontalAlignment="Center">
 
             <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center">
+                        HorizontalAlignment="Center"
+                        Margin="5">
 
                 <TextBlock 
                     Width="150"
                     Text="Введите логин:"
                     />
                 <TextBox 
-                    Name="TxbLogin"/>
+                    Name="TxbLogin"
+                    Width="200"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+            HorizontalAlignment="Center"
+                        Margin="5">
+
+                <TextBlock 
+                    Width="150"
+                    Text="Введите ФИО:"
+                    />
+                <TextBox 
+                    Name="TxbFullName"
+                    Width="200"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+ HorizontalAlignment="Center"
+             Margin="5">
+
+                <TextBlock 
+         Width="150"
+         Text="Выберите роль: "
+         />
+                <ComboBox
+                    Name="RoleComboBox"
+                    Width="200"
+         />
 
             </StackPanel>
 
             <StackPanel       
                 Orientation="Horizontal"
-                HorizontalAlignment="Center">
+                HorizontalAlignment="Center"
+                Margin="5">
                 <TextBlock 
                     Width="150"
                     Text="Введите пароль:"/>
                 <TextBox 
-                    Name="TxbPassword"/>
+                    Name="TxbPassword"
+                    Width="200"/>
             </StackPanel>
 
             <StackPanel
-                Margin="5,0,5,0"
+                Margin="5"
                 Orientation="Horizontal"
                 HorizontalAlignment="Center"
                         >
@@ -51,6 +85,7 @@
                 <PasswordBox
                     PasswordChanged="PasswordBox_PasswordChanged"
                     Name="PsbPassword"
+                    Width="200"
                     />
 
             </StackPanel>
@@ -63,7 +98,7 @@
                 Click="Btn_Create_Click"
                 Margin="5,0,5,5"
                 Content="Создать"
-                Style="{StaticResource AcceptButton}"/>
+                />
             </StackPanel>
 
 

@@ -25,6 +25,9 @@ namespace PR2_UchebnayaPractika.Pages
         public PageRegistrarion()
         {
             InitializeComponent();
+            RoleComboBox.SelectedValuePath = "RoleID";
+            RoleComboBox.DisplayMemberPath = "Name";
+            RoleComboBox.ItemsSource = ConnectBase1.entObj.Role.ToList();
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -60,11 +63,13 @@ namespace PR2_UchebnayaPractika.Pages
             {
                 try
                 {
+
                     User userObj = new User()
                     {
                         Login = TxbLogin.Text,
                         Password = TxbPassword.Text,
-                        RoleID = 1,
+                        RoleID = Convert.ToInt32(RoleComboBox.SelectedValue.ToString()),
+                        Full_name = TxbFullName.Text,
                     };
 
                     ConnectBase1.entObj.User.Add(userObj);

@@ -57,6 +57,7 @@
     <EntitySetMapping Name="User">
       <EntityTypeMapping TypeName="PR2_Ushebnaya_PracticaModel.User">
         <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Full_name" ColumnName="Full_name" />
           <ScalarProperty Name="RoleID" ColumnName="RoleID" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Login" ColumnName="Login" />

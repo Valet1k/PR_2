@@ -48,22 +48,20 @@ namespace PR2_UchebnayaPractika.Pages
                 else 
                 {
                     UserControlHelper.UserID = userObj.UserID;
-                    MessageBox.Show("Вы вошли в свой аккаунт!", "Уведомление",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Information);
-                    FrameApp.frmObj.Navigate(new Pages.PageEmployee());
+                    
 
                     switch (userObj.RoleID)
                     {
                         case 1:
                             {
                                 UserControlHelper.Login = TxbLogin.Text;
+                                FrameApp.frmObj.Navigate(new Pages.PageEmployee());
                             }
                             break;
 
                             case 2: 
                             {
-                                FrameApp.frmObj.Navigate(new Pages.PageRegistrarion());
+                                MessageBox.Show("Пока не сделали");
                             }
                             break;
 

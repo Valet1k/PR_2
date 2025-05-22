@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:PR2_UchebnayaPractika.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageEditOrder">
+      Title="страница заказов">
 
     <Grid Margin="10">
         <Grid.RowDefinitions>
@@ -88,6 +88,18 @@
                      Margin="0,0,0,10"
                      />
                 </StackPanel>
+
+                <StackPanel Grid.Column="2">
+                    <TextBlock 
+                        Text="Ориентировачная дата:" 
+                        Margin="0,5"/>
+
+                    <DatePicker
+                        Name="RoughDatePicker"/>
+
+                </StackPanel>
+
+
             </StackPanel>
         </Grid>
 
@@ -101,6 +113,7 @@
             <Button
              Content="Сохранить заявку"
              Name="BtnAddSave"
+             Click="BtnAddSave_Click"
              
              Width="150" 
              Background="LightGreen" 

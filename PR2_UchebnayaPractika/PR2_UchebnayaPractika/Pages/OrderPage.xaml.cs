@@ -34,6 +34,12 @@ namespace PR2_UchebnayaPractika.Pages
 
         private void BtnAddSave_Click(object sender, RoutedEventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(EquipmentTextBox.Text) || string.IsNullOrWhiteSpace(SerialNumberTextBox.Text) || string.IsNullOrWhiteSpace(MalfunctionTextBox.Text) || string.IsNullOrWhiteSpace(UserPhoneTextBox.Text) || string.IsNullOrWhiteSpace(ProblemDescriptionTextBox.Text))
+            {
+                MessageBox.Show("Заполните все поля!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
             try
             {
                 Order orderObj = new Order()

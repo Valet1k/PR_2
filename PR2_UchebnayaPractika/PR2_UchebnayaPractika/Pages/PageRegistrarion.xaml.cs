@@ -54,6 +54,25 @@ namespace PR2_UchebnayaPractika.Pages
 
         private void Btn_Create_Click(object sender, RoutedEventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(TxbLogin.Text) || string.IsNullOrWhiteSpace(TxbFullName.Text) || string.IsNullOrWhiteSpace(TxbPassword.Text) || (RoleComboBox.SelectedIndex == -1))
+            {
+                MessageBox.Show("Заполните все поля!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
             if (ConnectBase1.entObj.User.Count(x => x.Login == TxbLogin.Text) > 0)
             {
                 MessageBox.Show("Такой пользователь уже есть!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -78,13 +97,16 @@ namespace PR2_UchebnayaPractika.Pages
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ошибка! Проверьте правильно ли вы ввели данные!" + ex.Message.ToString(), 
-                        " Сбой работы приложения!",MessageBoxButton.OK,MessageBoxImage.Error);
+                    MessageBox.Show("Ошибка! Проверьте правильно ли вы ввели данные!" + ex.Message.ToString(),
+                        " Сбой работы приложения!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-                
 
-                
+
+
             }
+
+            
+            
 
             
 

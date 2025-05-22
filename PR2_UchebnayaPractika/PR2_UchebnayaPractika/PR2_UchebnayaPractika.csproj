@@ -135,6 +135,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageForMaster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageRegistrarion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -155,6 +159,9 @@
     </Compile>
     <Compile Include="Pages\PageEmployee.xaml.cs">
       <DependentUpon>PageEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageForMaster.xaml.cs">
+      <DependentUpon>PageForMaster.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageRegistrarion.xaml.cs">
       <DependentUpon>PageRegistrarion.xaml</DependentUpon>

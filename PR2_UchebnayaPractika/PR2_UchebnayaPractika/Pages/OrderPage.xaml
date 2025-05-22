@@ -1,0 +1,87 @@
+﻿<Page x:Class="PR2_UchebnayaPractika.Pages.OrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PR2_UchebnayaPractika.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Страница заказов">
+
+
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Имя оборудования:" Margin="0,5"/>
+                <TextBox
+                 Height="25"
+                 x:Name="EquipmentTextBox" 
+                 Margin="0,0,0,10"
+                 />
+
+                <TextBlock Text="Серийный номер оборудования:" Margin="0,5"/>
+                <TextBox
+                 Height="25"
+                 x:Name="SerialNumberTextBox" 
+                 Margin="0,0,0,10"/>
+
+                <TextBlock Text="Тип неисправности:" Margin="0,5"/>
+                <TextBox 
+                 Height="25"
+                 x:Name="MalfunctionTextBox" 
+                 Margin="0,0,0,10"
+                 />
+            </StackPanel>
+
+            <StackPanel Grid.Column="2">
+                <TextBlock Text="Ваш номер телефона:" Margin="0,5"/>
+                <TextBox
+                 Height="25"
+                 x:Name="UserPhoneTextBox" 
+                 Margin="0,0,0,10"
+                 />
+
+                
+            </StackPanel>
+        </Grid>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Bottom" Margin="0,10">
+            <TextBlock Text="Описание проблемы:" Margin="0,5"/>
+            <TextBox x:Name="ProblemDescriptionTextBox" 
+                  AcceptsReturn="True" TextWrapping="Wrap" 
+                  Height="80" VerticalScrollBarVisibility="Auto"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10">
+            <Button 
+             x:Name="BtnBack" 
+             Click="BtnBack_Click"
+             Content="Отмена" 
+             Width="100" 
+             Margin="0,0,10,0" />
+            <Button
+                 Content="Сохранить заявку"
+                 Name="BtnAddSave"
+                 Click="BtnAddSave_Click"
+                 Width="150" 
+                 Background="LightGreen" 
+                 Foreground="White"
+                 FontWeight="Bold" />
+        </StackPanel>
+    </Grid>
+
+</Page>

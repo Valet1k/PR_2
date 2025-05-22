@@ -1,0 +1,35 @@
+﻿<Window x:Class="PR2_UchebnayaPractika.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR2_UchebnayaPractika"
+        mc:Ignorable="d"
+        Title="Ремонт техники" Height="550" Width="800">
+    <Grid Background="Lavender">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Image Source="Image/котик2.ico"/>
+            
+            <TextBlock
+                FontSize="18"
+                FontWeight="Bold"
+                Margin="10"
+                VerticalAlignment="Center"
+                Text="{Binding ElementName=FrmMain,
+                Path=Content.Title}"/>
+        </StackPanel>
+       
+
+        <Frame
+            Name="FrmMain"
+            NavigationUIVisibility="Hidden"
+            Background="White"
+            Grid.Row="1"/>
+
+    </Grid>
+</Window>

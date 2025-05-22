@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PR2_Ushebnaya_PracticaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="PR2_Ushebnaya_PracticaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Order" EntityType="PR2_Ushebnaya_PracticaModel.Order" />
+    <EntitySet Name="Role" EntityType="PR2_Ushebnaya_PracticaModel.Role" />
+    <EntitySet Name="Status" EntityType="PR2_Ushebnaya_PracticaModel.Status" />
+    <EntitySet Name="sysdiagrams" EntityType="PR2_Ushebnaya_PracticaModel.sysdiagrams" />
+    <EntitySet Name="User" EntityType="PR2_Ushebnaya_PracticaModel.User" />
+    <AssociationSet Name="FK__Order__StatusID__6383C8BA" Association="PR2_Ushebnaya_PracticaModel.FK__Order__StatusID__6383C8BA">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Order__UserID__6477ECF3" Association="PR2_Ushebnaya_PracticaModel.FK__Order__UserID__6477ECF3">
+      <End Role="User" EntitySet="User" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__User__RoleID__5DCAEF64" Association="PR2_Ushebnaya_PracticaModel.FK__User__RoleID__5DCAEF64">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateAdd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Equipment" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Serial_Number" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Type_Of_Malfunction" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description_Problem" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Number_Phone" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="StatusID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" />
+    <NavigationProperty Name="Status" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__StatusID__6383C8BA" FromRole="Order" ToRole="Status" />
+    <NavigationProperty Name="User" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__UserID__6477ECF3" FromRole="Order" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="PR2_Ushebnaya_PracticaModel.FK__User__RoleID__5DCAEF64" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Order" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__StatusID__6383C8BA" FromRole="Status" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__UserID__6477ECF3" FromRole="User" ToRole="Order" />
+    <NavigationProperty Name="Role" Relationship="PR2_Ushebnaya_PracticaModel.FK__User__RoleID__5DCAEF64" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <Association Name="FK__Order__StatusID__6383C8BA">
+    <End Type="PR2_Ushebnaya_PracticaModel.Status" Role="Status" Multiplicity="1" />
+    <End Type="PR2_Ushebnaya_PracticaModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Order__UserID__6477ECF3">
+    <End Type="PR2_Ushebnaya_PracticaModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="PR2_Ushebnaya_PracticaModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__User__RoleID__5DCAEF64">
+    <End Type="PR2_Ushebnaya_PracticaModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="PR2_Ushebnaya_PracticaModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,47 @@
+﻿<Page x:Class="PR2_UchebnayaPractika.Pages.PageAutorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PR2_UchebnayaPractika.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Страница авторизации">
+
+    <Grid>
+        <StackPanel
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        Width="200">
+
+            <TextBlock Text="Логин:" Margin="0 10 0 5" HorizontalAlignment="Center"/>
+            <TextBox 
+                Width="160" 
+                Name="TxbLogin"
+                HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Пароль:" Margin="0 10 0 5" HorizontalAlignment="Center"/>
+            <PasswordBox 
+                Name="PsbPassword"
+                Width="160"
+                HorizontalAlignment="Center"/>
+
+            <StackPanel 
+                Orientation="Horizontal" 
+                  HorizontalAlignment="Center"
+                  Margin="0 15 0 0">
+                <Button Content="Войти" Width="70" Margin="0 0 10 0" Name="BtnLogin" Click="BtnLogin_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+
+        <Button 
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Name="BtnBack"
+            Click="BtnBack_Click"
+            Content="Назад"
+            Margin="5"/>
+        
+    </Grid>
+</Page>

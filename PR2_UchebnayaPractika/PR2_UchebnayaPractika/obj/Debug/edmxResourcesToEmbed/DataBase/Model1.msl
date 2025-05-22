@@ -4,6 +4,9 @@
     <EntitySetMapping Name="Order">
       <EntityTypeMapping TypeName="PR2_Ushebnaya_PracticaModel.Order">
         <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Rough_Date" ColumnName="Rough_Date" />
+          <ScalarProperty Name="PriorityID" ColumnName="PriorityID" />
+          <ScalarProperty Name="Final_Description" ColumnName="Final_Description" />
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="StatusID" ColumnName="StatusID" />
           <ScalarProperty Name="Number_Phone" ColumnName="Number_Phone" />
@@ -13,6 +16,14 @@
           <ScalarProperty Name="Equipment" ColumnName="Equipment" />
           <ScalarProperty Name="DateAdd" ColumnName="DateAdd" />
           <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Priority">
+      <EntityTypeMapping TypeName="PR2_Ushebnaya_PracticaModel.Priority">
+        <MappingFragment StoreEntitySet="Priority">
+          <ScalarProperty Name="Name_Priority" ColumnName="Name_Priority" />
+          <ScalarProperty Name="PriorityID" ColumnName="PriorityID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

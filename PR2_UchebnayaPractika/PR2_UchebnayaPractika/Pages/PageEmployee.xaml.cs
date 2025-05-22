@@ -1,4 +1,5 @@
 ﻿using PR2_UchebnayaPractika.Classes;
+using PR2_UchebnayaPractika.DataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,7 @@ namespace PR2_UchebnayaPractika.Pages
 
         private void BtnMore_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameApp.frmObj.Navigate(new PageEditOrder((sender as Button).DataContext as Order));
         }
     }
 }

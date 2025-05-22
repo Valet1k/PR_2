@@ -2,19 +2,24 @@
 <Schema Namespace="PR2_Ushebnaya_PracticaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="PR2_Ushebnaya_PracticaEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Order" EntityType="PR2_Ushebnaya_PracticaModel.Order" />
+    <EntitySet Name="Priority" EntityType="PR2_Ushebnaya_PracticaModel.Priority" />
     <EntitySet Name="Role" EntityType="PR2_Ushebnaya_PracticaModel.Role" />
     <EntitySet Name="Status" EntityType="PR2_Ushebnaya_PracticaModel.Status" />
     <EntitySet Name="sysdiagrams" EntityType="PR2_Ushebnaya_PracticaModel.sysdiagrams" />
     <EntitySet Name="User" EntityType="PR2_Ushebnaya_PracticaModel.User" />
-    <AssociationSet Name="FK__Order__StatusID__6383C8BA" Association="PR2_Ushebnaya_PracticaModel.FK__Order__StatusID__6383C8BA">
+    <AssociationSet Name="FK__Order__PriorityI__72C60C4A" Association="PR2_Ushebnaya_PracticaModel.FK__Order__PriorityI__72C60C4A">
+      <End Role="Priority" EntitySet="Priority" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Order__StatusID__70DDC3D8" Association="PR2_Ushebnaya_PracticaModel.FK__Order__StatusID__70DDC3D8">
       <End Role="Status" EntitySet="Status" />
       <End Role="Order" EntitySet="Order" />
     </AssociationSet>
-    <AssociationSet Name="FK__Order__UserID__6477ECF3" Association="PR2_Ushebnaya_PracticaModel.FK__Order__UserID__6477ECF3">
+    <AssociationSet Name="FK__Order__UserID__71D1E811" Association="PR2_Ushebnaya_PracticaModel.FK__Order__UserID__71D1E811">
       <End Role="User" EntitySet="User" />
       <End Role="Order" EntitySet="Order" />
     </AssociationSet>
-    <AssociationSet Name="FK__User__RoleID__5DCAEF64" Association="PR2_Ushebnaya_PracticaModel.FK__User__RoleID__5DCAEF64">
+    <AssociationSet Name="FK__User__RoleID__693CA210" Association="PR2_Ushebnaya_PracticaModel.FK__User__RoleID__693CA210">
       <End Role="Role" EntitySet="Role" />
       <End Role="User" EntitySet="User" />
     </AssociationSet>
@@ -32,8 +37,20 @@
     <Property Name="Number_Phone" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
     <Property Name="StatusID" Type="Int32" Nullable="false" />
     <Property Name="UserID" Type="Int32" />
-    <NavigationProperty Name="Status" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__StatusID__6383C8BA" FromRole="Order" ToRole="Status" />
-    <NavigationProperty Name="User" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__UserID__6477ECF3" FromRole="Order" ToRole="User" />
+    <Property Name="Final_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PriorityID" Type="Int32" />
+    <Property Name="Rough_Date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Priority" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__PriorityI__72C60C4A" FromRole="Order" ToRole="Priority" />
+    <NavigationProperty Name="Status" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__StatusID__70DDC3D8" FromRole="Order" ToRole="Status" />
+    <NavigationProperty Name="User" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__UserID__71D1E811" FromRole="Order" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Priority">
+    <Key>
+      <PropertyRef Name="PriorityID" />
+    </Key>
+    <Property Name="PriorityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Priority" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Order" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__PriorityI__72C60C4A" FromRole="Priority" ToRole="Order" />
   </EntityType>
   <EntityType Name="Role">
     <Key>
@@ -41,7 +58,7 @@
     </Key>
     <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="User" Relationship="PR2_Ushebnaya_PracticaModel.FK__User__RoleID__5DCAEF64" FromRole="Role" ToRole="User" />
+    <NavigationProperty Name="User" Relationship="PR2_Ushebnaya_PracticaModel.FK__User__RoleID__693CA210" FromRole="Role" ToRole="User" />
   </EntityType>
   <EntityType Name="Status">
     <Key>
@@ -49,7 +66,7 @@
     </Key>
     <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name_Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Order" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__StatusID__6383C8BA" FromRole="Status" ToRole="Order" />
+    <NavigationProperty Name="Order" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__StatusID__70DDC3D8" FromRole="Status" ToRole="Order" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -69,10 +86,22 @@
     <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="RoleID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Order" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__UserID__6477ECF3" FromRole="User" ToRole="Order" />
-    <NavigationProperty Name="Role" Relationship="PR2_Ushebnaya_PracticaModel.FK__User__RoleID__5DCAEF64" FromRole="User" ToRole="Role" />
+    <NavigationProperty Name="Order" Relationship="PR2_Ushebnaya_PracticaModel.FK__Order__UserID__71D1E811" FromRole="User" ToRole="Order" />
+    <NavigationProperty Name="Role" Relationship="PR2_Ushebnaya_PracticaModel.FK__User__RoleID__693CA210" FromRole="User" ToRole="Role" />
   </EntityType>
-  <Association Name="FK__Order__StatusID__6383C8BA">
+  <Association Name="FK__Order__PriorityI__72C60C4A">
+    <End Type="PR2_Ushebnaya_PracticaModel.Priority" Role="Priority" Multiplicity="0..1" />
+    <End Type="PR2_Ushebnaya_PracticaModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Priority">
+        <PropertyRef Name="PriorityID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="PriorityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Order__StatusID__70DDC3D8">
     <End Type="PR2_Ushebnaya_PracticaModel.Status" Role="Status" Multiplicity="1" />
     <End Type="PR2_Ushebnaya_PracticaModel.Order" Role="Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -84,7 +113,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Order__UserID__6477ECF3">
+  <Association Name="FK__Order__UserID__71D1E811">
     <End Type="PR2_Ushebnaya_PracticaModel.User" Role="User" Multiplicity="0..1" />
     <End Type="PR2_Ushebnaya_PracticaModel.Order" Role="Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -96,7 +125,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__User__RoleID__5DCAEF64">
+  <Association Name="FK__User__RoleID__693CA210">
     <End Type="PR2_Ushebnaya_PracticaModel.Role" Role="Role" Multiplicity="1" />
     <End Type="PR2_Ushebnaya_PracticaModel.User" Role="User" Multiplicity="*" />
     <ReferentialConstraint>

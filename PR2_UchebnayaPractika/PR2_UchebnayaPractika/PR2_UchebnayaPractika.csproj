@@ -96,6 +96,9 @@
     <Compile Include="DataBase\Order.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataBase\Priority.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\Role.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageEditOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageEmployee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -142,6 +149,9 @@
     </Compile>
     <Compile Include="Pages\PageAutorization.xaml.cs">
       <DependentUpon>PageAutorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageEditOrder.xaml.cs">
+      <DependentUpon>PageEditOrder.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageEmployee.xaml.cs">
       <DependentUpon>PageEmployee.xaml</DependentUpon>

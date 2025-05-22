@@ -13,6 +13,16 @@
     <Property Name="Number_Phone" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="StatusID" Type="int" Nullable="false" />
     <Property Name="UserID" Type="int" />
+    <Property Name="Final_Description" Type="varchar(max)" />
+    <Property Name="PriorityID" Type="int" />
+    <Property Name="Rough_Date" Type="date" />
+  </EntityType>
+  <EntityType Name="Priority">
+    <Key>
+      <PropertyRef Name="PriorityID" />
+    </Key>
+    <Property Name="PriorityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Priority" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Role">
     <Key>
@@ -47,7 +57,19 @@
     <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="RoleID" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK__Order__StatusID__6383C8BA">
+  <Association Name="FK__Order__PriorityI__72C60C4A">
+    <End Role="Priority" Type="Self.Priority" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Priority">
+        <PropertyRef Name="PriorityID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="PriorityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Order__StatusID__70DDC3D8">
     <End Role="Status" Type="Self.Status" Multiplicity="1" />
     <End Role="Order" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -59,7 +81,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Order__UserID__6477ECF3">
+  <Association Name="FK__Order__UserID__71D1E811">
     <End Role="User" Type="Self.User" Multiplicity="0..1" />
     <End Role="Order" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -71,7 +93,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__User__RoleID__5DCAEF64">
+  <Association Name="FK__User__RoleID__693CA210">
     <End Role="Role" Type="Self.Role" Multiplicity="1" />
     <End Role="User" Type="Self.User" Multiplicity="*" />
     <ReferentialConstraint>
@@ -85,19 +107,24 @@
   </Association>
   <EntityContainer Name="Хранилище PR2_Ushebnaya_PracticaModelContainer">
     <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Priority" EntityType="Self.Priority" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__Order__StatusID__6383C8BA" Association="Self.FK__Order__StatusID__6383C8BA">
+    <AssociationSet Name="FK__Order__PriorityI__72C60C4A" Association="Self.FK__Order__PriorityI__72C60C4A">
+      <End Role="Priority" EntitySet="Priority" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Order__StatusID__70DDC3D8" Association="Self.FK__Order__StatusID__70DDC3D8">
       <End Role="Status" EntitySet="Status" />
       <End Role="Order" EntitySet="Order" />
     </AssociationSet>
-    <AssociationSet Name="FK__Order__UserID__6477ECF3" Association="Self.FK__Order__UserID__6477ECF3">
+    <AssociationSet Name="FK__Order__UserID__71D1E811" Association="Self.FK__Order__UserID__71D1E811">
       <End Role="User" EntitySet="User" />
       <End Role="Order" EntitySet="Order" />
     </AssociationSet>
-    <AssociationSet Name="FK__User__RoleID__5DCAEF64" Association="Self.FK__User__RoleID__5DCAEF64">
+    <AssociationSet Name="FK__User__RoleID__693CA210" Association="Self.FK__User__RoleID__693CA210">
       <End Role="Role" EntitySet="Role" />
       <End Role="User" EntitySet="User" />
     </AssociationSet>

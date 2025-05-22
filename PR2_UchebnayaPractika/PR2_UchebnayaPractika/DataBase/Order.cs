@@ -23,7 +23,11 @@ namespace PR2_UchebnayaPractika.DataBase
         public string Number_Phone { get; set; }
         public int StatusID { get; set; }
         public Nullable<int> UserID { get; set; }
+        public string Final_Description { get; set; }
+        public Nullable<int> PriorityID { get; set; }
+        public Nullable<System.DateTime> Rough_Date { get; set; }
     
+        public virtual Priority Priority { get; set; }
         public virtual Status Status { get; set; }
         public virtual User User { get; set; }
     }

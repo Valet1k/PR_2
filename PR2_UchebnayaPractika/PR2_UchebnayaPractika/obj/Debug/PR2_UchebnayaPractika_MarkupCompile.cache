@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\
+C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\
 PR2_UchebnayaPractika
 none
 false
 DEBUG;TRACE
-C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\PR2_UchebnayaPractika\PR2_UchebnayaPractika\App.xaml
-6-1512384591
+C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\App.xaml
+7-2078562824
 2-1670966889
-211578019547
-18-1641032137
-MainWindow.xaml;Pages\MainPage.xaml;Pages\OrderPage.xaml;Pages\PageAutorization.xaml;Pages\PageEmployee.xaml;Pages\PageRegistrarion.xaml;
+232061644417
+18-1937021143
+MainWindow.xaml;Pages\MainPage.xaml;Pages\OrderPage.xaml;Pages\PageAutorization.xaml;Pages\PageEditOrder.xaml;Pages\PageEmployee.xaml;Pages\PageRegistrarion.xaml;
 
 False
 

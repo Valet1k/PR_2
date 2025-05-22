@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PR2_UchebnayaPractika"
         mc:Ignorable="d"
-        Title="Ремонт техники" Height="550" Width="800">
+        Title="Ремонт техники" Height="550" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="Lavender">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

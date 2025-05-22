@@ -26,6 +26,7 @@ namespace PR2_UchebnayaPractika.DataBase
         }
     
         public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<Priority> Priority { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Status> Status { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }

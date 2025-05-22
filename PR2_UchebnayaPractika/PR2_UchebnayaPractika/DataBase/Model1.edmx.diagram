@@ -5,12 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="876c3ccf60f74e2ebc9134bd46200c44" Name="Diagram1" ZoomLevel="64">
-        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.Order" Width="1.5" PointX="5.25" PointY="2.375" />
-        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.Priority" Width="1.5" PointX="3" PointY="0.75" />
-        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.Role" Width="1.5" PointX="0.75" PointY="3.625" />
-        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.Status" Width="1.5" PointX="3" PointY="6.375" />
-        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.125" />
-        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.User" Width="1.5" PointX="3" PointY="3.25" />
+        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.Order" Width="1.5" PointX="5.25" PointY="2.625" />
+        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.Priority" Width="1.5" PointX="3" PointY="7.125" />
+        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.Role" Width="1.5" PointX="0.75" PointY="3.875" />
+        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.Status" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.25" />
+        <EntityTypeShape EntityType="PR2_Ushebnaya_PracticaModel.User" Width="1.5" PointX="3" PointY="3.5" />
         <AssociationConnector Association="PR2_Ushebnaya_PracticaModel.FK__Order__PriorityI__72C60C4A" />
         <AssociationConnector Association="PR2_Ushebnaya_PracticaModel.FK__Order__StatusID__70DDC3D8" />
         <AssociationConnector Association="PR2_Ushebnaya_PracticaModel.FK__Order__UserID__71D1E811" />

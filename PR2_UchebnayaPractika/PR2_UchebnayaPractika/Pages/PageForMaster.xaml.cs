@@ -25,7 +25,7 @@ namespace PR2_UchebnayaPractika.Pages
         public PageForMaster()
         {
             InitializeComponent();
-            GridListRequest.ItemsSource = ConnectBase1.entObj.Order.Where(x => x.UserID == UserControlHelper.UserID).ToList();
+            GridListRequest.ItemsSource = ConnectBase1.entObj.Order.Where(x => x.UserID == UserControlHelper.UserID && x.StatusID != 1).ToList();
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

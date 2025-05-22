@@ -16,6 +16,8 @@
     <Property Name="Final_Description" Type="varchar(max)" />
     <Property Name="PriorityID" Type="int" />
     <Property Name="Rough_Date" Type="date" />
+    <Property Name="Close_Date" Type="datetime" />
+    <Property Name="Total_Materials_List" Type="text" />
   </EntityType>
   <EntityType Name="Priority">
     <Key>

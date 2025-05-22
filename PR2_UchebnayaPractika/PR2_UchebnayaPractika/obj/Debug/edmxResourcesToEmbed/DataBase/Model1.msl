@@ -4,6 +4,8 @@
     <EntitySetMapping Name="Order">
       <EntityTypeMapping TypeName="PR2_Ushebnaya_PracticaModel.Order">
         <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Total_Materials_List" ColumnName="Total_Materials_List" />
+          <ScalarProperty Name="Close_Date" ColumnName="Close_Date" />
           <ScalarProperty Name="Rough_Date" ColumnName="Rough_Date" />
           <ScalarProperty Name="PriorityID" ColumnName="PriorityID" />
           <ScalarProperty Name="Final_Description" ColumnName="Final_Description" />

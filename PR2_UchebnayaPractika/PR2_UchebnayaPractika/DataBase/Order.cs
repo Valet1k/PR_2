@@ -26,6 +26,8 @@ namespace PR2_UchebnayaPractika.DataBase
         public string Final_Description { get; set; }
         public Nullable<int> PriorityID { get; set; }
         public Nullable<System.DateTime> Rough_Date { get; set; }
+        public Nullable<System.DateTime> Close_Date { get; set; }
+        public string Total_Materials_List { get; set; }
     
         public virtual Priority Priority { get; set; }
         public virtual Status Status { get; set; }

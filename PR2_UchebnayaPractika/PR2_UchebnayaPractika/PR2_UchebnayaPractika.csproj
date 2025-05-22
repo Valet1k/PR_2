@@ -217,6 +217,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="напоминалка.txt" />
     <Resource Include="котик2.ico" />
   </ItemGroup>
   <ItemGroup>

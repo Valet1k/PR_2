@@ -60,7 +60,24 @@ namespace PR2_UchebnayaPractika.Pages
 
         private void BtnOrderClose_Click(object sender, RoutedEventArgs e)
         {
-           
+            var existingOrder = ConnectBase1.entObj.Order.FirstOrDefault(o => o.OrderID == order_id);
+
+            if (existingOrder != null)
+            {
+
+                existingOrder.Final_Description = FinalyDecsription.Text;
+                existingOrder.Total_Materials_List = TotalMaterialsTxb.Text;
+                existingOrder.Close_Date = DateTime.Now;
+                existingOrder.StatusID = 1;
+
+                ConnectBase1.entObj.SaveChanges();
+
+                MessageBox.Show("Запись успешно обновлена!");
+            }
+            else
+            {
+                MessageBox.Show("Запись с указанным OrderID не найдена!");
+            }
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

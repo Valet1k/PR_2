@@ -61,7 +61,8 @@ namespace PR2_UchebnayaPractika.Pages
 
                             case 2: 
                             {
-                                MessageBox.Show("Пока не сделали");
+                                UserControlHelper.UserID = userObj.UserID;
+                                FrameApp.frmObj.Navigate(new Pages.PageForMaster());
                             }
                             break;
 

@@ -6,9 +6,66 @@
       xmlns:local="clr-namespace:PR2_UchebnayaPractika.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageForMaster">
+      Title="Страница мастера">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel
+        HorizontalAlignment="Right"
+        VerticalAlignment="Top"
+        Orientation="Horizontal"
+        Margin="5"
+        Grid.Row="0">
+
+            <Button
+           Name="BtnBack"
+           Click="BtnBack_Click"
+           Content="Назад"
+           Margin="0,0,5,0"/>
+
         
+        </StackPanel>
+
+        <DataGrid 
+Grid.Row="1" 
+Name="GridListRequest"
+AutoGenerateColumns="False"
+IsReadOnly="True"
+VerticalScrollBarVisibility="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+        Width = "*" 
+        Header="Номер заявки"
+        Binding="{Binding OrderID}"/>
+                <DataGridTextColumn 
+        Width = "*" 
+        Header="Время созд.заявк"
+        Binding="{Binding DateAdd}"/>
+                <DataGridTextColumn 
+        Width = "*"
+        Header="Оборудование"
+        Binding="{Binding Equipment}"/>
+                <DataGridTextColumn 
+        Width = "*" 
+        Header="Статус"
+        Binding="{Binding Status.Name_Status}"/>
+                <DataGridTemplateColumn >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button
+                    x:Name="BtnCloseOrder"
+                    Click="BtnCloseOrder_Click"
+                    Content="Просмотр"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
     </Grid>
 </Page>

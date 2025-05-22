@@ -64,3 +64,7 @@ C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\
 C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\PR2_UchebnayaPractika.csproj.GenerateResource.cache
 C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\PR2_UchebnayaPractika.csproj.CoreCompileInputs.cache
 C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\PR2_Uche.904D7D83.Up2Date
+C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\Pages\PageForMaster.g.cs
+C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\Pages\PageForMaster.baml
+C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\Pages\CloseOrderPage.g.cs
+C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\Pages\CloseOrderPage.baml

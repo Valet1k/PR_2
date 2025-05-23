@@ -4,7 +4,19 @@
              xmlns:local="clr-namespace:PR2_UchebnayaPractika"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-       
+        <Style TargetType="Button" x:Key="nikita">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="Lavender"/>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+
+        
 
     </Application.Resources>
 </Application>

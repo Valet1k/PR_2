@@ -73,6 +73,7 @@ namespace PR2_UchebnayaPractika.Pages
                 ConnectBase1.entObj.SaveChanges();
 
                 MessageBox.Show("Запись успешно обновлена!");
+                FrameApp.frmObj.Navigate(new Pages.PageForMaster());
             }
             else
             {
@@ -82,7 +83,7 @@ namespace PR2_UchebnayaPractika.Pages
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            FrameApp.frmObj.GoBack();
+            FrameApp.frmObj.Navigate(new Pages.PageForMaster());
         }
 
         private void BtnAddMaterial_Click(object sender, RoutedEventArgs e)

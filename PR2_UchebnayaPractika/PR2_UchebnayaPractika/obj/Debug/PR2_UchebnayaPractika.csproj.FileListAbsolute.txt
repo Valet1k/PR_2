@@ -68,3 +68,7 @@ C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\
 C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\Pages\PageForMaster.baml
 C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\Pages\CloseOrderPage.g.cs
 C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\Pages\CloseOrderPage.baml
+C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\obj\Debug\App.baml
+C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\bin\Debug\Spire.XLS.dll
+C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\bin\Debug\Spire.XLS.xml
+C:\Users\Valya\OneDrive\Рабочий стол\Учебная практика\repositories\PR_2\PR2_UchebnayaPractika\PR2_UchebnayaPractika\bin\Debug\ru\EntityFramework.SqlServer.resources.dll

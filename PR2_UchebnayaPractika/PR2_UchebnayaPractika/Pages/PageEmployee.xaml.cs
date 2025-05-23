@@ -28,6 +28,8 @@ namespace PR2_UchebnayaPractika.Pages
             GridListRequest.ItemsSource = ConnectBase1.entObj.Order.ToList();
         }
 
+       
+
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             FrameApp.frmObj.GoBack();

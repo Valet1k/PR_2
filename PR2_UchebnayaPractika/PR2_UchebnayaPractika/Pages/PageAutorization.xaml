@@ -24,13 +24,19 @@
             <PasswordBox 
                 Name="PsbPassword"
                 Width="160"
-                HorizontalAlignment="Center"/>
+                HorizontalAlignment="Center"
+                />
 
             <StackPanel 
                 Orientation="Horizontal" 
                   HorizontalAlignment="Center"
                   Margin="0 15 0 0">
-                <Button Content="Войти" Width="70" Margin="0 0 10 0" Name="BtnLogin" Click="BtnLogin_Click"/>
+                <Button Content="Войти" 
+                        Width="130"
+                        Height="30"
+                        Margin="0 0 10 0" 
+                        Name="BtnLogin" 
+                        Click="BtnLogin_Click"/>
             </StackPanel>
         </StackPanel>
 
@@ -39,6 +45,8 @@
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
             Name="BtnBack"
+            Width="130"
+            Height="30"
             Click="BtnBack_Click"
             Content="Назад"
             Margin="5"/>

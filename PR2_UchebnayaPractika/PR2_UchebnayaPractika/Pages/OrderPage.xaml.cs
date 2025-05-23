@@ -56,6 +56,7 @@ namespace PR2_UchebnayaPractika.Pages
                 ConnectBase1.entObj.Order.Add(orderObj);
                 ConnectBase1.entObj.SaveChanges();
                 MessageBox.Show($"Скоро починим ваш дурацкий {EquipmentTextBox.Text} ожидайте!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                FrameApp.frmObj.GoBack();
             }
             catch (Exception ex)
             {
